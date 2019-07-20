@@ -24,20 +24,30 @@ It's a set of validators...and is therefore used like other [validators](https:/
 
 ### Boolean Validator
 
-Validates that the value is actually **true** or **false**.
+Validates that the value is boolean in nature.
 ```ruby
-validates :allow_something, boolean: true # Allows only non-null booleanish values (most values that aren't nil are true - but in this case, nil is NOT false, and thus fails).
-validates :preference_that_can_be_null, boolean: {allow_nil: true} # Allows basically anything. Probably this is useless...
-validates :strict_preference, boolean: {strict: true} # Allows ONLY true or false.
-validates :strict_preference_that_can_be_null, boolean: {strict: true, allow_nil: true} # Allows ONLY true, false, or nil.
+# Allows only non-null booleanish values (most values that aren't nil are true - but in this case, nil is NOT false, and thus fails).
+validates :allow_something, boolean: true
+
+# Allows basically anything. Probably this is useless...
+validates :preference_that_can_be_null, boolean: {allow_nil: true}
+
+# Allows ONLY true or false.
+validates :strict_preference, boolean: {strict: true}
+
+# Allows ONLY true, false, or nil.
+validates :strict_preference_that_can_be_null, boolean: {strict: true, allow_nil: true}
 ```
 
 ### Locale Validator
 
 Validates that the value is within the allowed locales for the application.
 ```ruby
-validates locale, locale: true # Allows strings/symbols, checks against available locales.
-validates locale, locale: {allow_nil: true} # Same as above, but nil is valid.
+# Allows strings/symbols, checks against available locales.
+validates locale, locale: true
+
+# Same as above, but nil is valid.
+validates locale, locale: {allow_nil: true}
 ```
 
 ### Email Validator
