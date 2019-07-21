@@ -45,10 +45,21 @@ validates :strict_preference_that_can_be_null, boolean: {strict: true, allow_nil
 Validates that the value is within the allowed locales for the application.
 ```ruby
 # Allows strings/symbols, checks against available locales.
-validates locale, locale: true
+validates :locale, locale: true
 
 # Same as above, but nil is valid.
-validates locale, locale: {allow_nil: true}
+validates :locale, locale: {allow_nil: true}
+```
+
+### Timezone Validator
+
+Validates that the value is a valid timezone.
+```ruby
+# Allows strings/symbols, checks against available locales.
+validates :time_zone, timezone: true
+
+# Same as above, but nil is valid.
+validates :time_zone, timezone: {allow_nil: true}
 ```
 
 ### Email Validator
