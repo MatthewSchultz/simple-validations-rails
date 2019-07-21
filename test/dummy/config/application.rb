@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "simple_validations_rails"
+require "simple-validations-rails"
 
 module Dummy
   class Application < Rails::Application

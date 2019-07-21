@@ -1,4 +1,5 @@
-require 'simple_validations_rails/railtie'
+require 'simple-validations-rails/railtie'
+require 'active_model'
 require 'validators/boolean_validator'
 require 'validators/email_validator'
 require 'validators/locale_validator'
