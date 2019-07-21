@@ -1,5 +1,11 @@
 class LocaleValidator < PluginValidator
-  def validate_each(record, attribute, value)
-    record.errors.add attribute, 'is not a valid locale' unless I18n.locale_available?(value) || (options[:allow_nil] && value.nil?)
+  protected
+
+  def validation_message
+    'is not a valid locale.'
+  end
+
+  def is_valid?(value)
+    I18n.locale_available?(value)
   end
 end

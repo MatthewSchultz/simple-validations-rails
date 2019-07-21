@@ -1,9 +1,9 @@
 class BooleanValidator < PluginValidator
-  def validate_each(record, attribute, value)
-    record.errors.add attribute, message_or('is not a valid boolean') unless is_valid?(value)
-  end
-
   protected
+
+  def validation_message
+    'is not a valid value.'
+  end
 
   def is_valid?(value)
     return true if !options[:strict] && value.present?

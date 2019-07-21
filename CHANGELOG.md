@@ -7,6 +7,7 @@
 * [ENHANCEMENT] Testing for LocaleValidator.
 * [ENHANCEMENT] Support message option.
 * [ENHANCEMENT] **allow_nil** becomes **allow_blank**. This follows the conventions of rails' built-in validators. **allow_nil** still works, but is depreciated.
+* [ENHANCEMENT] DRY up the validators.
 
 ## 0.0.3 / 2019-007-21
 

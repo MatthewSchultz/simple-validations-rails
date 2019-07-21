@@ -1,11 +1,18 @@
 class EmailValidator < PluginValidator
   MAX_EMAIL_LENGTH = 254
 
-  def validate_each(record, attribute, value)
-    record.errors.add attribute, 'is not a valid locale' unless (options[:allow_nil] && value.nil?) || ( regex.match?(value) && value.legnth <= MAX_EMAIL_LENGTH || options[:skip_length])
+  protected
+
+  def validation_message
+    'is not a valid email'
   end
 
-  protected
+  def is_valid?(value)
+    unless options[:skip_length]
+      return false if value.legnth > MAX_EMAIL_LENGTH
+    end
+    return email_regex.match?(value)
+  end
 
   def self.email_regex()
     options = {mode: :normal}.merge options

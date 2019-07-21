@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple-validations-rails (0.0.3)
+    simple-validations-rails (0.0.4)
       rails (~> 5.2.3)
 
 GEM
