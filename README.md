@@ -1,4 +1,5 @@
 # simple-validations-rails
+![Gem](https://img.shields.io/gem/v/simple-validations-rails.svg)
 A simple set of validations I got tired of writing over and over and over again. Includes boolean, locale, and email validators.
 
 ## Installation

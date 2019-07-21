@@ -1,3 +1,13 @@
+## 0.0.4 / 2019-007-21
+
+* [FEATURE] Add TimezoneValidator
+* [BUGFIX] Fix BooleanValidatorTest class name
+* [BUGFIX] Require Ruby 2.4 to enable pattern match. See [Release Notes](https://www.ruby-lang.org/en/news/2016/12/25/ruby-2-4-0-released/) for info.
+* [BUGFIX] Actually make EmailValidator work
+* [ENHANCEMENT] Testing for LocaleValidator.
+* [ENHANCEMENT] Support message option.
+* [ENHANCEMENT] **allow_nil** becomes **allow_blank**. This follows the conventions of rails' built-in validators. **allow_nil** still works, but is depreciated.
+
 ## 0.0.3 / 2019-007-21
 
 * [BUGFIX] Rename all files appropriately so the gem actually works.

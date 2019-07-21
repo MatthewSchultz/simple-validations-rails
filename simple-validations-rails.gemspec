@@ -15,6 +15,8 @@ Gem::Specification.new do |spec|
   spec.metadata    = {
     'source_code_uri' => "https://github.com/MatthewSchultz/simple-validations-rails"
   }
+  # Required for pattern.match?
+  spec.required_ruby_version = '>= 2.4.0'
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 

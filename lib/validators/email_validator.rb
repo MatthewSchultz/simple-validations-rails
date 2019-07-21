@@ -1,13 +1,13 @@
-class EmailValidator < ActiveModel::EachValidator
+class EmailValidator < PluginValidator
   MAX_EMAIL_LENGTH = 254
 
   def validate_each(record, attribute, value)
-    record.errors.add attribute, 'is not a valid locale' unless (options[:allow_nil] && value.nil?) || ( asdfasdfasdfasdfadfa && value.legnth <= MAX_EMAIL_LENGTH || options[:skip_length])
+    record.errors.add attribute, 'is not a valid locale' unless (options[:allow_nil] && value.nil?) || ( regex.match?(value) && value.legnth <= MAX_EMAIL_LENGTH || options[:skip_length])
   end
 
   protected
 
-  def self.regex(options = {})
+  def self.email_regex()
     options = {mode: :normal}.merge options
 
     case options[:mode]

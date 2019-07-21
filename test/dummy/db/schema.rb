@@ -10,11 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_184042) do
+ActiveRecord::Schema.define(version: 2019_07_21_180516) do
 
   create_table "boolean_models", force: :cascade do |t|
     t.boolean "normal_bool_value", null: false
     t.boolean "nil_bool_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locale_models", force: :cascade do |t|
+    t.string "lo_value", null: false
+    t.string "nil_lo_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "time_zone_models", force: :cascade do |t|
+    t.string "tz_value", null: false
+    t.string "nil_tz_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

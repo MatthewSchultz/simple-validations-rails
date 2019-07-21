@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SimpleValidationsRails::Test < ActiveSupport::TestCase
+class BooleanValidatorTest < ActiveSupport::TestCase
   setup do
     @model = BooleanModel.new
     assert @model.present?
