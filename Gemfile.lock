@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     simple-validations-rails (0.0.4)
-      rails (~> 5.2.3)
+      rails (>= 5.2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -110,7 +110,7 @@ GEM
     sqlite3 (1.4.1)
     thor (0.20.3)
     thread_safe (0.3.6)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
